@@ -20,19 +20,23 @@ package javasBible.interfaceExample.chap_7_oop.innerClass;
 class OuterClass {
     int iv = 100;
     static int cv = 200;
-    final int fv = 300;
+
     void method1() {
         int lv = 100;
 
         class LocalClass {
+            int lclv = 100;
+            final int fv = 200;
+
             //지역 클래스는 외부 클래스의 인스턴스멤버와 static 멤버를 모두 사용할 수 있다.
             int a = iv;
             int b = cv;
             //지역 클래스가 포함된 메서드에 정의된 지역변수를 사용할 수 있다.
             int c = lv;
-
+            //final 이 붙은 지역변수만 참조 가능.
             int d = fv;
-
+            //JDK 1.8부터는 final 키워드 생략이 가능하다 -> 컴파일러가 자동으로 final 을 붙여줌.
+            int e = lclv;
         } //지역 클래스 끝
     } //메서드 끝
 } //외부 클래스
