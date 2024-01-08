@@ -1,6 +1,6 @@
-package java_ex_1000;
+package save;
 
-public class WordScrambleEx1{
+public class WordScrambleEx1 {
     public static void main(String[] args) {
         String[] strArr = { "CHANGE", "LOVE", "HOPE", "VIEW"};
 
@@ -25,7 +25,7 @@ public class WordScrambleEx1{
         System.out.println(spelling.length);
         for (int i = 0; i < str.length(); i++) {
             int num = (int)(Math.random() * str.length());
-
+            
             char tmp = spelling[0];
             spelling[0] = spelling[num];
             spelling[num] = tmp;
